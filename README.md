@@ -1,1 +1,10 @@
 # Text Search Component
+## About the project
+I develop a Text Search program using components on both Windows and the Linux operating system. For the Windows-based program I will use the Microsoft COM technology. Linux does not support COM so I will build my own component infrastructure for that environment.
+
+## Features
+1. using Visual Studio 2017 for the COM-on-Windows program and g++ ver 5.3 for the Components-on-Linux program
+2. on each platform, provide a console application that, given on the command line: a regular-expression search string, a path, and a set of file name patterns, identifies by name and path all those files matching one or more of the patterns and which contain an instance of the search string. It does this using the services of two components, described below.
+3. provide a text search component that accepts a fully qualified file name and regular-expression text pattern. If the file matches the text pattern in one or more locations, it returns a list of line numbers where the matches occur. If no matches occur, it returns an empty list.
+4. provide a FileMgr component that finds the fully qualified names of all files residing in a directory tree rooted at a specified path and matching one or more of the filename patterns. It exposes these results by providing a get(...) method that retrieves each result from an internal thread-safe blocking queue, and returns the result with a success code of true. When its search has ended, the get(...) method returns a success code with value false.
+5. use a Powershell script on windows and a Bash script on Linux to demonstrate that the application, and its components, implement their required functionality. The combination of scripts and console applications should clearly show the initial requests, the output of the FileMgr, and the output of the file search processing.

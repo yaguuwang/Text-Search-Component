@@ -1,0 +1,16 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {82040f21-3232-4269-a575-c5cd708df823} = s 'TextSearchComObj class'
+		{
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{060e9da1-5111-42a9-9c94-aa7acb1c3b5e}'
+			Version = s '1.0'
+		}
+	}
+}

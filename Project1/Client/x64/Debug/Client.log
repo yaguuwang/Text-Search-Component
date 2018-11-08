@@ -1,0 +1,6 @@
+﻿  TextSearchCom_i.c
+  FileMgrCom_i.c
+  Generating Code...
+  Client.cpp
+\\mac\home\documents\775-do\project 1\project1 2\project1\client\client.cpp(65): warning C4267: '=': conversion from 'size_t' to 'ULONG', possible loss of data
+  Client.vcxproj -> \\Mac\Home\Documents\775-DO\Project 1\Project1 2\Project1\x64\Debug\Client.exe
